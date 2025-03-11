@@ -1,0 +1,18 @@
+MOV AX,14090
+MOV CX,0
+
+LOOP1:
+    MOV DX,0
+    MOV BX,10
+    DIV BX
+    PUSH DX
+    INC CX
+    TEST AX,AX
+    JNZ LOOP1
+    
+LOOP2:
+    POP DX
+    ADD DL,30H
+    MOV AH,02H
+    INT 21H
+    LOOP LOOP2
