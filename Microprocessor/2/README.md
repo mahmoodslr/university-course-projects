@@ -24,7 +24,7 @@ This assembly program simulates a 30-second countdown timer using the 8086 micro
 - Stops execution when the countdown reaches 0.
 
 ---
-# T3
+# T2
 
 ## Overview
 This assembly program simulates a three-phase traffic light system with a countdown timer using a simulated LED display. The traffic light operates with specific timing for each phase, and a countdown timer is displayed on an LED screen to indicate the remaining time for each state.
