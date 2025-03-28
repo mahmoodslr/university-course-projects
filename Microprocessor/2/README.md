@@ -22,3 +22,41 @@ This assembly program simulates a 30-second countdown timer using the 8086 micro
 - Displays countdown from 30 to 0 on the LED display.
 - Uses INT 15h (AH=86h) to introduce a 1-second delay per count.
 - Stops execution when the countdown reaches 0.
+
+---
+# T3
+
+## Overview
+This assembly program simulates a three-phase traffic light system with a countdown timer using a simulated LED display. The traffic light operates with specific timing for each phase, and a countdown timer is displayed on an LED screen to indicate the remaining time for each state.
+
+## Features
+
+- Three-phase traffic light system
+  - Green light for the right street (17 seconds)
+  - Green light for the left street (10 seconds)
+  - Green lights for vertical streets (13 seconds)
+  - Yellow light for transition phases (3 seconds each)
+- Countdown Timer on LED Display
+  - A decrementing counter is displayed on the LED screen for each phase.
+
+## Implementation Details
+
+- The program starts with all traffic lights set to red.
+- It iterates through a predefined sequence of traffic light states stored in memory.
+- Each state has a specific duration, which is handled using a countdown loop.
+- The countdown timer is output to port 199.
+- The system uses INT 15h for time delays.
+
+## Code Structure
+
+1- Traffic Light State Selection
+- The program reads the current traffic light state from memory (situation table).
+- It compares the state using CMP and jumps to the corresponding routine.
+
+2- Countdown Timer Execution
+- Each traffic light phase has a countdown timer that decrements the displayed value on the LED display (port 199).
+- A delay loop ensures that each second is properly simulated.
+
+3- Looping Through Traffic Light States
+- After executing a state, the program moves to the next state in the sequence.
+- If the last state is reached, the sequence restarts from the beginning.
