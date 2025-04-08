@@ -2,14 +2,11 @@
 name "traffic"
 #start=led_display.exe#
 #make_bin#
-name "led"
 
 mov ax, all_red
 out 4, ax
 
-
 mov si, offset situation
-
 
 next:
 mov ax, [si]    
@@ -19,12 +16,9 @@ je green_right
 cmp ax, 0000_1000_0100_1001b 
 je green_left
 
-cmp ax, 0000_0011_0000_1001b  
+cmp ax, 0000_0011_0000_1100b  
 je green_vertical            
                  
-cmp ax, 0000_0010_0100_1100b  
-je green_vertical                 
-
 jmp default_case  
 
 green_right:
@@ -96,14 +90,12 @@ next_state:
 
 
 ;                        FEDC_BA98_7654_3210
-situation        dw      0000_0010_0100_1100b
-s1               dw      0000_0010_0100_1010b
-s2               dw      0000_0010_0110_0001b
-s3               dw      0000_0010_0101_0001b
-s4               dw      0000_0011_0000_1001b
-s5               dw      0000_0010_1000_1001b
-s6               dw      0000_1000_0100_1001b
-s7               dw      0000_0100_0100_1001b
+situation        dw      0000_0010_0110_0001b
+s1               dw      0000_0010_0101_0001b  
+s2               dw      0000_0011_0000_1100b 
+s3               dw      0000_0010_1000_1010b
+s4               dw      0000_1000_0100_1001b
+s5               dw      0000_0100_0100_1001b 
 sit_end = $
 
 
