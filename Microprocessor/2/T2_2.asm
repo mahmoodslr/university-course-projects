@@ -2,7 +2,6 @@
 name "traffic"
 #start=led_display.exe#
 #make_bin#
-name "led"
 
 mov ax, all_red
 out 4, ax
