@@ -24,7 +24,6 @@ l2: mov al, [si]
     dec si
     dec bl
     jnz l2
-;    jmp l1
     jmp input
     
 cycle2:
@@ -41,7 +40,6 @@ l4: mov al, [si]
     inc si
     dec bl
     jnz l4
-;    jmp l3
     jmp input
     
     
@@ -59,7 +57,6 @@ l6: mov al, [si]
     dec si
     dec bl
     jnz l6
-;    jmp l5
     jmp input
     hlt
     
