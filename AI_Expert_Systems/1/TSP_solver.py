@@ -146,7 +146,7 @@ def rbfs_tsp(cities, adjacency_matrix):
         print("No solution found!!!")
 
 if __name__ == "__main__":
-    file_path = "test3.txt"  # نام فایل ورودی
+    file_path = "test1.txt"  # نام فایل ورودی
     cities, adjacency_matrix = read_input(file_path)
     a_star_tsp(cities, adjacency_matrix)
     rbfs_tsp(cities, adjacency_matrix)
