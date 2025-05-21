@@ -16,3 +16,5 @@ LOOP2:
     MOV AH,02H
     INT 21H
     LOOP LOOP2
+
+HLT
