@@ -1,4 +1,4 @@
-    fnd equ 3FF0h 
+fnd equ 3FF0h 
     
 input: 
     mov dx, 3FD0h
