@@ -237,18 +237,6 @@ The notebook visualizes:
 
 ---
 
-# How to Run
-
-Run the notebook:
-
-```bash
-jupyter notebook cv-project_final.ipynb
-```
-
-or execute the Python cells sequentially.
-
----
-
 # Results
 
 The project demonstrates the differences between:
