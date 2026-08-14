@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOP</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/img/hero/sale.png" />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ============================================================
+        Navbar
+    ============================================================ -->
+    <nav
+      class="navbar navbar-expand-md custom-navbar fixed-top shadow"
+      id="customNavbar"
+    >
+      <div class="container">
+        <a
+          href="#"
+          class="navbar-brand custom-logo fw-bold fs-3"
+          id="customLogo"
+          style="color: #0b2341"
+        >
+          SHOP
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link custom-nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#AboutUs" class="nav-link custom-nav-link">About us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle custom-nav-link"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Category</a
+              >
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item custom-dropdown-item"
+                    href="#man-products"
+                    >Man</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item custom-dropdown-item"
+                    href="#woman-products"
+                    >Woman</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div
+            class="custom-buttons d-flex gap-2 mt-3 mt-md-0 align-items-center"
+          >
+            <!-- Cart Button -->
+            <button
+              class="cart-btn"
+              id="cartToggleBtn"
+              onclick="openCart()"
+              title="Shopping cart"
+            >
+              <i class="bi bi-bag"></i>
+              <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+            <a href="login.html" class="custom-login-btn">LOGIN</a>
+            <button class="custom-theme-btn" id="customThemeBtn">🌙</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end Navbar -->
+
+    <!-- ============================================================
+        Hero / Header
+    ============================================================ -->
+    <div class="container my-5">
+      <div class="hero-wrap p-5">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h1 class="display-4 fw-bold">All Men's Wear</h1>
+            <p class="text-secondary my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, in.
+              Voluptatibus, mollitia quis molestiae.
+            </p>
+            <a href="#man-products" class="btn-shop text-decoration-none"
+              >Shop Now</a
+            >
+          </div>
+          <div class="col-lg-5 mt-4 mt-lg-0">
+            <div class="sale-box">
+              <img
+                class="img-fluid"
+                src="assets/img/hero/shopping.png"
+                alt="shopping"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Hero -->
+
+    <!-- ============================================================
+        Woman Section
+    ============================================================ -->
+    <div id="woman-products" class="top-products-wrapper my-5">
+      <div class="container">
+        <div class="text-center mx-auto mb-4" style="max-width: 600px">
+          <h2 class="text-black my-2">✨Woman</h2>
+          <p class="woman-desc">
+            A collection of women's clothing with up-to-date designs and
+            high-quality fabrics. From formal to everyday sets, everything you
+            need is here.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="woman-product-card" onclick="openProductModal(1)">
+              <img
+                src="assets/img/women/women.png"
+                alt="Women Ethnic"
+                class="woman-product-img"
+              />
+              <h3 class="woman-product-title">Women Ethnic</h3>
+              <p class="woman-product-color">White</p>
+              <p class="product-price">49,000 T</p>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  addToCart(1);
+                "
+              >
+                <i class="bi bi-bag-plus"></i> Add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="woman-product-card" onclick="openProductModal(2)">
+              <img
+                src="assets/img/women/women2.jpg"
+                alt="Women Weston"
+                class="woman-product-img"
+              />
+              <h3 class="woman-product-title">Women Weston</h3>
+              <p class="woman-product-color">Red</p>
+              <p class="product-price">62,000 T</p>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  addToCart(2);
+                "
+              >
+                <i class="bi bi-bag-plus"></i> Add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="woman-product-card" onclick="openProductModal(3)">
+              <img
+                src="assets/img/women/women3.jpg"
+                alt="Goggles"
+                class="woman-product-img"
+              />
+              <h3 class="woman-product-title">Goggles</h3>
+              <p class="woman-product-color">Brown</p>
+              <p class="product-price">18,000 T</p>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  addToCart(3);
+                "
+              >
+                <i class="bi bi-bag-plus"></i> Add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="woman-product-card" onclick="openProductModal(4)">
+              <img
+                src="assets/img/women/women4.jpg"
+                alt="Women Ethnic Yellow"
+                class="woman-product-img"
+              />
+              <h3 class="woman-product-title">Women Ethnic</h3>
+              <p class="woman-product-color">Yellow</p>
+              <p class="product-price">55,000 T</p>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  addToCart(4);
+                "
+              >
+                <i class="bi bi-bag-plus"></i> Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Woman Section -->
+
+    <!-- ============================================================
+        Man Section
+    ============================================================ -->
+    <div id="man-products" class="top-products-wrapper my-5">
+      <div class="container">
+        <div class="text-center mx-auto mb-4" style="max-width: 600px">
+          <h2 class="text-black my-2">✨Man</h2>
+          <p class="top-products-desc">
+            Upgrade your style with the latest t-shirts, shirts and sweatpants.
+            A combination of comfort and style for the modern man.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-5">
+            <div class="top-product-card" onclick="openProductModal(5)">
+              <div class="text-center">
+                <img
+                  src="assets/img/shirt/shirt.png"
+                  alt="Casual Wear"
+                  class="top-product-img"
+                />
+              </div>
+              <h3 class="top-product-title">Casual Wear</h3>
+              <p class="top-product-desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <p class="product-price">38,000 T</p>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  addToCart(5);
+                "
+              >
+                <i class="bi bi-bag-plus"></i> Add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-5">
+            <div class="top-product-card" onclick="openProductModal(6)">
+              <div class="text-center">
+                <img
+                  src="assets/img/shirt/shirt2.png"
+                  alt="Printed Shirts"
+                  class="top-product-img"
+                />
+              </div>
+              <h3 class="top-product-title">Printed Shirts</h3>
+              <p class="top-product-desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <p class="product-price">44,000 T</p>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  addToCart(6);
+                "
+              >
+                <i class="bi bi-bag-plus"></i> Add to cart
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-5">
+            <div class="top-product-card" onclick="openProductModal(7)">
+              <div class="text-center">
+                <img
+                  src="assets/img/shirt/shirt3.png"
+                  alt="Women Shirts"
+                  class="top-product-img"
+                />
+              </div>
+              <h3 class="top-product-title">Women Shirts</h3>
+              <p class="top-product-desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+              <p class="product-price">41,000 T</p>
+              <button
+                class="add-to-cart-btn"
+                onclick="
+                  event.stopPropagation();
+                  addToCart(7);
+                "
+              >
+                <i class="bi bi-bag-plus"></i> Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Man Section -->
+
+    <!-- ============================================================
+        About Us
+    ============================================================ -->
+    <div id="AboutUs" class="about-wrapper my-4">
+      <div class="container">
+        <div class="text-center mx-auto mb-4" style="max-width: 600px">
+          <h2 class="text-black my-2">✨About Us</h2>
+          <p class="about-desc">
+            With more than 5 years of experience in offering the best domestic
+            and foreign brands, SHOP always considers customer satisfaction its
+            priority.
+          </p>
+        </div>
+
+        <div class="row about-stats text-center">
+          <div class="col-6 col-md-3 p-2">
+            <div class="about-stat-box">
+              <h3 class="about-stat-number">500+</h3>
+              <p class="about-stat-text">Happy Customers</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 p-2">
+            <div class="about-stat-box">
+              <h3 class="about-stat-number">300+</h3>
+              <p class="about-stat-text">Products Sold</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 p-2">
+            <div class="about-stat-box">
+              <h3 class="about-stat-number">50+</h3>
+              <p class="about-stat-text">Brand Partners</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 p-2">
+            <div class="about-stat-box">
+              <h3 class="about-stat-number">4.8</h3>
+              <p class="about-stat-text">Customer Rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end About Us -->
+
+    <!-- ============================================================
+        Footer
+    ============================================================ -->
+    <footer
+      style="
+        background: #000;
+        padding: 0 0 30px 0;
+        color: #fff;
+        font-size: 14px;
+      "
+    >
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <h3 class="fw-bold">SHOP</h3>
+            <p class="fs-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              dignissimos ad provident perspiciatis obcaecati velit asperiores
+              ipsam voluptatem sapiente?
+            </p>
+            <p class="text-center">
+              Iran<br />
+              <strong>Phone:</strong> +09020001010<br />
+              <strong>Email:</strong> info@example.com
+            </p>
+            <div class="my-3 text-center">
+              <a href="#" class="footer_link_item1"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="footer_link_item1"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="footer_link_item1"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-2 mb-4">
+            <h5 class="fw-bold">Important Links</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mt-3">
+                <i class="bi bi-chevron-right"></i>
+                <a href="#" class="text-decoration-none text-white footer-link"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mt-3">
+                <i class="bi bi-chevron-right"></i>
+                <a
+                  href="#AboutUs"
+                  class="text-decoration-none text-white footer-link"
+                  >About us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <h5 class="mb-4 fw-bold">Suggestions</h5>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control rounded-4"
+                placeholder="Your email"
+              />
+              <button
+                class="input-group-text btn btn-outline-light rounded-pill px-4"
+                type="button"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="footer_item2">© Copyright. All Rights Reserved</div>
+      </div>
+    </footer>
+    <!-- end Footer -->
+
+    <!-- ============================================================
+        Cart Sidebar
+    ============================================================ -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-sidebar-header">
+        <h5><i class="bi bi-bag me-2"></i>Shopping Cart</h5>
+        <button class="cart-close-btn" onclick="closeCart()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList">
+        <div class="cart-empty">
+          <i class="bi bi-bag-x"></i>
+          <p>Your cart is empty</p>
+        </div>
+      </div>
+
+      <div class="cart-sidebar-footer">
+        <div class="cart-total-row">
+          <span class="cart-total-label">Total</span>
+          <span class="cart-total-price" id="cartTotal">0 T</span>
+        </div>
+        <button class="cart-checkout-btn" onclick="alert('coming soon!')">
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+    <!-- end Cart Sidebar -->
+
+    <!-- ============================================================
+        Product Modal
+    ============================================================ -->
+    <div
+      class="product-modal-overlay"
+      id="productModalOverlay"
+      onclick="closeProductModal()"
+    >
+      <div class="product-modal" onclick="event.stopPropagation()">
+        <button class="product-modal-close" onclick="closeProductModal()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="product-modal-img-wrapper" id="modalImgWrapper">
+          <img class="product-modal-img" id="modalImg" src="" alt="" />
+        </div>
+        <div class="product-modal-body">
+          <h2 class="product-modal-title" id="modalTitle"></h2>
+          <p class="product-modal-color" id="modalColor"></p>
+          <p class="product-modal-price" id="modalPrice"></p>
+          <p class="product-modal-desc" id="modalDesc"></p>
+          <div class="product-modal-actions">
+            <button class="modal-add-btn" id="modalAddBtn">
+              <i class="bi bi-bag-plus"></i> Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Product Modal -->
+
+    <!-- Notification -->
+    <div class="cart-Notif" id="cartNotif">
+      <i class="bi bi-check-circle-fill"></i>
+      <span></span>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
